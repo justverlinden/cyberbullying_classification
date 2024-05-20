@@ -25,7 +25,7 @@ X_sequences = tokenizer.texts_to_sequences(X)
 max_sequence_length = max([len(seq) for seq in X_sequences])
 X_padded = pad_sequences(X_sequences, maxlen=max_sequence_length)
 
-X_train, X_test, y_train, y_test = train_test_split(X_padded, y, test_size=0.1, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_padded, y, test_size=0.2, random_state=42)
 
 def build_best_model():
     model = Sequential()
